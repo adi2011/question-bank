@@ -10,7 +10,7 @@
 			$fetchdata = $database->getReference($ref)->getValue();
 			foreach($fetchdata as $key => $row){
 				// echo $row['id'];
-				echo "HELLO YR KYA KARU MAAIN?";
+				echo ("HELLO YR KYA KARU MAAIN?");
 			}
 		?>
 
