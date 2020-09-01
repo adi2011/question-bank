@@ -9,7 +9,7 @@
 			include('includes\dbconfig.php');
 			$ref="kohbee-library-1d47d/number systems and its operations/0";
 			// $fetchdata = $database->getReference($ref)->getValue();
-			$reference = $database->getReference("kohbee-library-1d47d/number systems and its operations");
+			$reference = $database->getReference("question-bank/number systems and its operations/0");
 			$snapshot = $reference->getSnapshot();
 			$value = $snapshot->getValue();
 			echo ($value.exists());
