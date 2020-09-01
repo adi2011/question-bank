@@ -9,7 +9,7 @@
 			ini_set('display_startup_errors', 1); 
 			error_reporting(E_ALL);
 			echo ("HELLO YR KYA KARU MAAIN?");
-			include('./includes\dbconfig.php');
+			include('./includes/dbconfig.php');
 			// $ref="question-bank/number systems and its operations";
 			// $fetchdata = $database->getReference($ref)->getValue();
 			// $reference = $database->getReference("question-bank/number systems and its operations/0");
