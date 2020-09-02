@@ -117,7 +117,7 @@ ul.nav li a {
 
 .section .slider,
 .section .footer {
-  background: #4DB6AC;
+  background: #1D797E;
 }
 
 .slidercontent {
