@@ -612,14 +612,7 @@ h2 {
     </div>
   </div>
 </div>
-<div class="section">
-  <div class="slider">
-    <div class="container slidercontent">
-      <h1 class="hero">Kohbee Questions</h1>
-      <h2 class="hero">Questions made by the top-faculties over india to clear your concepts </h2>
-    </div>
-  </div>
-</div>
+
 
     <?php
     ini_set('display_errors', 1); 
