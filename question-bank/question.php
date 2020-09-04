@@ -662,7 +662,7 @@ h2 {
     ?>
 
 
-`   <div style="margin: 0% 20%; padding: 0% 10%;">
+    <div style="margin: 0% 20%; padding: 0% 10%;">
     <form method="post">
         <input type="submit" name="prev"
                 value="Previous"/>
