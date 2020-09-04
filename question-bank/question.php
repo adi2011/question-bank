@@ -121,6 +121,7 @@ button .arrow {
   width: 32px;
 }
 .row {
+  
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -143,16 +144,18 @@ button .arrow {
   background: linear-gradient(-45deg, rgba(247, 251, 255, 0.4) 20%, rgba(0, 0, 0, 0.2) 100%);
 }
 .screen {
+  margin:0% 10%;
   align-items: center;
   background: linear-gradient(135deg, #d9e3f2, #d9e3f2);
   border-radius: 32px;
   box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1), inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6);
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 150px;
   justify-content: space-around;
   width: 80vw;
 }
+
 
 
 
@@ -658,22 +661,37 @@ h2 {
     echo $_SESSION["current"];
     echo "</h1>";
     ?>
-<div class="screen">
+
+
+<div class="screen" >
     <div class="row">
         <form method="post">
-        
-        <input type="submit" name="next" value="Next"/>
-        <label for="button-1" class="button">➡</label>
-    
-        <input type="submit" name="show_ques" value="Show Questions"/> 
-        <label for="dot" class="dot"></label>
+        <input type="submit" name="prev"
+                value="Previous"/>
+        <label for="button-1" class="button">➡</label></form>
 
-        <input type="submit" name="prev" value="Previous"/>
-        <label for="button-2" class="button button-square button-border">⬅</label>
-        </form>
+        
+        <form method="post">
+        <input type="submit" name="show_ques"
+                value="Question 1"/>  
+        <label for="button-2" class="button">First</label></form>
+
+
+        <form method="post">
+    <input type="submit" name="next"
+                value="Next"/>
+    <label for="button-3" class="button button-square button-border">⬅</label></form>
     </div>
 </div>
 
+    <!-- <form method="post">
+        <input type="submit" name="prev"
+                value="Previous"/>
+        <input type="submit" name="show_ques"
+                value="Show Questions"/>  
+        <input type="submit" name="next"
+                value="Next"/>
+    </form>  -->
     
 </div>
 
