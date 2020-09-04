@@ -662,12 +662,12 @@ h2 {
     ?>
 
 
-    <div style="margin: 0% 20%; padding: 0% 10%;">
+    <div style="margin: 0% 20%;">
     <form method="post">
         <input type="submit" name="prev"
-                value="Previous"/>
+                value="Previous"/>&emsp;
         <input type="submit" name="show_ques"
-                value="First Question"/>  
+                value="First Question"/>&emsp;
         <input type="submit" name="next"
                 value="Nextt"/>
     </form> 
