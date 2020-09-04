@@ -672,6 +672,18 @@ h2 {
                 value="Next"/>
     </form> 
     </div>
+
+<div class="section">
+  <div class="footer">
+    <div class="container white">
+      <div class="col four left">
+        
+      </div>
+      <div class="group"></div>
+    </div>
+  </div>
+</div>
+
 </div>
 
 
