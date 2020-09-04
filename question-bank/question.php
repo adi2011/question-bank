@@ -486,7 +486,7 @@ h2 {
 </head>
 <body>
 
-<div class="hold">
+<!-- <div class="hold">
   <div class="header">
     <div class="container">
       <div id="logo">
@@ -499,7 +499,7 @@ h2 {
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 
     <?php
