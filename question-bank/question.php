@@ -662,16 +662,16 @@ h2 {
     ?>
 
 
-
+`   <div style="margin: 0% 20%">
     <form method="post">
         <input type="submit" name="prev"
                 value="Previous"/>
         <input type="submit" name="show_ques"
                 value="First Question"/>  
         <input type="submit" name="next"
-                value="Next"/>
+                value="Nextt"/>
     </form> 
-    
+    </div>
 </div>
 
 
