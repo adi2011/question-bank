@@ -1,6 +1,5 @@
 <?php
 session_start();
-$_SESSION["current"];
 ?>  
 <!DOCTYPE html>
 <html ⚡>
@@ -27,144 +26,33 @@ $_SESSION["current"];
 }/**/
 
 <style>
-body {
-  align-items: center;
-  background-color: #f4f6ff; 
-  background-image: linear-gradient(#4db6ac, #1d797e); 
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  margin: 0;
-  width: 100vw;
-}
-body * {
-  box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
-}
-.bevel {
-  align-items: center;
-  border-radius: 12px;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1), -3px -3px 3px 3px rgba(247, 251, 255, 0.5), 3px 3px 8px 2px rgba(0, 0, 0, 0) inset, -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 24px;
-  transition: border 0.1s ease, box-shadow 0.1s ease;
-}
-.bevel span {
-  margin-right: 20px;
-}
-.bevel strong {
-  margin-right: 20px;
-}
-button .arrow {
-  border-right: 2px solid #b3c8e6;
-  border-top: 2px solid #b3c8e6;
-  display: inline-block;
-  height: 16px;
-  margin-right: 0;
-  transform: translateX(-4px) rotate(45deg);
-  width: 16px;
-}
-.button {
-  align-items: center;
-  background-color: #d9e3f2;
-  border: 3px solid transparent;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1), -3px -3px 3px 3px rgba(247, 251, 255, 0.5), 3px 3px 8px 2px rgba(0, 0, 0, 0) inset, -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
-  color: transparent;
-  cursor: pointer;
-  display: flex;
-  font-size: 1.5em;
-  height: 48px;
-  justify-content: center;
-  position: relative;
-  -webkit-text-stroke: 1px #7989A4;
-  text-stroke: 1px solid #7989A4;
-  transition: border 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, text-stroke 0.1s ease, -webkit-text-stroke 0.1s ease;
-  width: 48px;
-}
-.button-border {
-  background: linear-gradient(#d9e3f2, #d9e3f2), linear-gradient(135deg, #fff 0%, #B5BEC8 100%);
-  border: 6px solid transparent;
-  border-radius: 14px;
-  background-repeat: no-repeat;
-  background-origin: padding-box, border-box;
-}
-.button-border::before {
-  border: 3px solid #d9e3f2;
-  border-radius: 10px;
-  bottom: -3px;
-  content: "";
-  left: -3px;
-  right: -3px;
-  position: absolute;
-  top: -3px;
-}
-.button-round {
-  border-radius: 50%;
-}
-.button-round:active {
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0), -3px -3px 3px 3px rgba(247, 251, 255, 0), 3px 3px 8px 2px rgba(0, 0, 0, 0.1) inset, -3px -3px 7px 2px rgba(247, 251, 255, 0.7) inset;
-}
-.button-square {
-  height: 64px;
-  width: 64px;
-}
-.dot {
-  background: linear-gradient(135deg, rgba(247, 251, 255, 0.7) 20%, rgba(0, 0, 0, 0.125) 100%);
-  border: 2px solid #d9e3f2;
-  border-radius: 16px;
-  box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.1), -3px -3px 5px 1px rgba(247, 251, 255, 0.5);
-  cursor: pointer;
-  height: 32px;
-  margin: 0 16px;
-  width: 32px;
-}
-.row {
-  
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-}
-.row input {
-  display: none;
-}
-.row input:checked + .button {
-  border: 3px solid #e0ebf5;
-  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0), -3px -3px 3px 3px rgba(247, 251, 255, 0), 3px 3px 8px 2px rgba(0, 0, 0, 0.1) inset, -3px -3px 7px 2px rgba(247, 251, 255, 0.7) inset;
-  color: #7989A4;
-  -webkit-text-stroke: 1px transparent;
-  text-stroke: 1px transparent;
-}
-.row input:checked + .button.button-border {
-  border: 6px solid transparent;
-}
-.row input:checked + .dot {
-  background: linear-gradient(-45deg, rgba(247, 251, 255, 0.4) 20%, rgba(0, 0, 0, 0.2) 100%);
-}
-.screen {
-  margin:0% 10%;
-  align-items: center;
-  background: linear-gradient(135deg, #d9e3f2, #d9e3f2);
-  border-radius: 32px;
-  box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1), inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6);
-  display: flex;
-  flex-direction: column;
-  height: 150px;
-  justify-content: space-around;
-  width: 80vw;
-}
 
 
+.content-page {
+      background: #f4f6ff;
+    }
 
+.main-layer {
+      align-content: center;
 
+      padding: 5px;
+      align-content: center;
+      color: black;
 
+      height: 80%;
+      margin: 20% 10%;
+      
 
+      border-radius: 20px;
+      background: #f4f6ff;
+      box-shadow: 8px 6px 12px #DADFF0,
+        -8px -6px 12px white;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
 
-
-
-
+    }
 
 
 
@@ -628,24 +516,37 @@ h2 {
     if(isset($_POST['show_ques'])) {
     $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
-    if($row['id']==$_SESSION["current"])
+    if($row['id']==$_SESSION["current"]){
+    echo '    <div class="content-page">
+    <div class="main-layer">';
     echo $row['ques'];
+    echo '</div></div>';
+    }
     }
     } 
 
     else if(isset($_POST['next'])) { 
         $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
-        if($row['id']==$_SESSION["current"])
-        echo $row['ques'];
+        if($row['id']==$_SESSION["current"]){
+            echo '    <div class="content-page">
+            <div class="main-layer">';
+            echo $row['ques'];
+            echo '</div></div>';
+            }
     }
     }
 
     else if(isset($_POST['prev'])) { 
         $_SESSION["current"]=$_SESSION["current"]-1;
         foreach($fetchdata as $key => $row){
-        if($row['id']==$_SESSION["current"])
-        echo $row['ques'];
+        if($row['id']==$_SESSION["current"]){
+            
+            echo '<div class="content-page"><div class="main-layer">';
+            echo $row['ques'];
+            echo '</div></div>';
+                
+        }
     }
     }
 
@@ -655,6 +556,9 @@ h2 {
     echo $_SESSION["current"];
     echo "</h1>";
     ?>
+
+        </div>
+    </div>
 
 <hr><br>
     <div style="margin: 0% 30%;">
@@ -668,23 +572,7 @@ h2 {
     </form> 
     </div>
         <br><br><br>
-    <div class="section">
-    <div class="footer">
-        <div class="container white">
-        <div class="col four left">
-            
-        </div>
-        <div class="group"></div>
-        </div>
-    </div>
-    </div>
 
-</div>
-
-
-
-
-		
 
 </body>
 </html>
