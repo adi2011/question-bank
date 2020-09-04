@@ -665,9 +665,9 @@ h2 {
     <div style="margin: 0% 30%;">
     <form method="post">
         <input type="submit" name="prev"
-                value="Previous"/>&emsp;
+                value="Previous"/>&emsp;&emsp;&emsp;
         <input type="submit" name="show_ques"
-                value="First Question"/>&emsp;
+                value="First Question"/>&emsp;&emsp;&emsp;
         <input type="submit" name="next"
                 value="Next"/>
     </form> 
