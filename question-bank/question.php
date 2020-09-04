@@ -661,7 +661,7 @@ h2 {
     echo "</h1>";
     ?>
 
-
+<hr><hr>
     <div style="margin: 0% 40%;">
     <form method="post">
         <input type="submit" name="prev"
