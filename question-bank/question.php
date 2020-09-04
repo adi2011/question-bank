@@ -568,14 +568,14 @@ h2 {
     ?>
     <?php 
     echo "<h1>";
-    echo $current;
+    echo $_SESSION["current"];
     echo "</h1>"
     ?>
     <form method="post">
         <input type="submit" name="show_ques"
-                value="Show Questions"/>  
+                value="Show Questions."/>  
         <input type="submit" name="next"
-                value="Next"/>
+                value="Next."/>
     </form> 
     
 
