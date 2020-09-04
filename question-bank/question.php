@@ -1,6 +1,5 @@
 <?php
 session_start();
-// $_SESSION["Whereto"]="mat-ch1";
 $_SESSION["current"];
 ?>  
 <!DOCTYPE html>
@@ -663,35 +662,15 @@ h2 {
     ?>
 
 
-<div class="screen" >
-    <div class="row">
-        <form method="post">
-        <input type="submit" name="prev"
-                value="Previous"/>
-        <label for="button-1" class="button">➡</label></form>
 
-        
-        <form method="post">
-        <input type="submit" name="show_ques"
-                value="Question 1"/>  
-        <label for="button-2" class="button">First</label></form>
-
-
-        <form method="post">
-    <input type="submit" name="next"
-                value="Next"/>
-    <label for="button-3" class="button button-square button-border">⬅</label></form>
-    </div>
-</div>
-
-    <!-- <form method="post">
+    <form method="post">
         <input type="submit" name="prev"
                 value="Previous"/>
         <input type="submit" name="show_ques"
                 value="Show Questions"/>  
         <input type="submit" name="next"
                 value="Next"/>
-    </form>  -->
+    </form> 
     
 </div>
 
