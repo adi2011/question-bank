@@ -1,7 +1,8 @@
 <?php
-
-
-?>
+session_start();
+// $_SESSION["Whereto"]="mat-ch1";
+$current=1;
+?>  
 <!DOCTYPE html>
 <html ⚡>
 <head>
@@ -11,7 +12,10 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Question Bank</title>
+	<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Question Bank</title>
 	<style>
 	/*
   terrible.css
@@ -537,38 +541,40 @@ h2 {
   </div>
 </div>
 
-
-<div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Question 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
     <?php
-			ini_set('display_errors', 1); 
-			ini_set('display_startup_errors', 1); 
-			error_reporting(E_ALL);
-			include('./includes/dbconfig.php');
-			$ref="question-bank/number systems and its operations";
-            $fetchdata = $database->getReference($ref)->getValue();
-            foreach($fetchdata as $key => $row){
-                echo "<a href=>";
-                echo $row['id'];
-                echo "</a>";
-			}
-	?>
-    </div>
-  </div>
-  <div><p><?php foreach($fetchdata as $key => $row){
-            if($row['id']==1)
-            echo $row['ques'];
-            }
-            ?></p></div>
+    if(isset($_POST['show_ques'])) {
+    ini_set('display_errors', 1); 
+    ini_set('display_startup_errors', 1); 
+    error_reporting(E_ALL);
+    include('./includes/dbconfig.php');
+    $ref="question-bank/number systems and its operations";
+    $fetchdata = $database->getReference($ref)->getValue();
+    foreach($fetchdata as $key => $row){
+    if($row['id']==$current)
+    echo $row['ques'];
+    }
+    } 
 
-</div>
-
-
-
+    if(isset($_POST['next'])) { 
+        $current=$current+1;
+        ini_set('display_errors', 1); 
+        ini_set('display_startup_errors', 1); 
+        error_reporting(E_ALL);
+        include('./includes/dbconfig.php');
+        $ref="question-bank/number systems and its operations";
+        $fetchdata = $database->getReference($ref)->getValue();
+        foreach($fetchdata as $key => $row){
+        if($row['id']==$current)
+        echo $row['ques'];
+    }
+     } 
+    ?>
+    <form method="post">
+        <input type="submit" name="show_ques"
+                value="Show Questions"/>  
+        <input type="submit" name="next"
+                value="Next"/>
+    </form> 
     
 
 
