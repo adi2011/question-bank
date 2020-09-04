@@ -40,7 +40,7 @@ session_start();
       color: black;
 
       height: 80%;
-      margin: 20% 10%;
+      margin: 3% 10%;
       
 
       border-radius: 20px;
@@ -559,7 +559,7 @@ h2 {
 
         </div>
     </div>
-
+    <!-- <div class="content-page"><div class="main-layer"><h1>ADITYA</h1></div></div> -->
 <hr><br>
     <div style="margin: 0% 30%;">
     <form method="post">
