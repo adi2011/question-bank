@@ -667,7 +667,7 @@ h2 {
         <input type="submit" name="prev"
                 value="Previous"/>
         <input type="submit" name="show_ques"
-                value="Show Questions"/>  
+                value="First Question"/>  
         <input type="submit" name="next"
                 value="Next"/>
     </form> 
