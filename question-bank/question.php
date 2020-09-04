@@ -630,7 +630,7 @@ h2 {
 	
 </head>
 <body>
-
+<!-- 
 <div class="hold">
   <div class="header">
     <div class="container">
@@ -644,15 +644,8 @@ h2 {
       </ul>
     </div>
   </div>
-</div>
-<div class="section">
-  <div class="slider">
-    <div class="container slidercontent">
-      <h1 class="hero">Kohbee Questions</h1>
-      <h2 class="hero">Questions made by the top-faculties over india to clear your concepts </h2>
-    </div>
-  </div>
-</div>
+</div> -->
+
 
     <?php
     ini_set('display_errors', 1); 
@@ -714,16 +707,7 @@ h2 {
     </form> 
     </div>
         <br><br><br>
-    <div class="section">
-    <div class="footer">
-        <div class="container white">
-        <div class="col four left">
-            
-        </div>
-        <div class="group"></div>
-        </div>
-    </div>
-    </div>
+    
 
 </div>
 
