@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html ⚡>
 <head>
@@ -6,7 +10,7 @@
 	<link rel="canonical" href="$SOME_URL">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Question Bank</title>
 	<style>
 	/*
@@ -19,6 +23,70 @@
   background:rgba(0, 0, 0, 0.1);
 }/**/
 
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 html,
 body {
   margin: 0;
@@ -438,11 +506,14 @@ h2 {
     display: none;
   }
 }
+
+</style>
+
 	
-	</style>
 </head>
 <body>
-
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
 <div class="hold">
   <div class="header">
     <div class="container">
@@ -466,30 +537,36 @@ h2 {
   </div>
 </div>
 
-<div class="section bg">
-  <div class="container">
-    <h1>Question</h1>
-    <div class="col three bg nopad pointer">
+
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Question 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
     <?php
 			ini_set('display_errors', 1); 
 			ini_set('display_startup_errors', 1); 
 			error_reporting(E_ALL);
-			echo ("HELLO YR KYA KARU MAAIN?");
 			include('./includes/dbconfig.php');
 			$ref="question-bank/number systems and its operations";
-			$fetchdata = $database->getReference($ref)->getValue();
-
-
-			foreach($fetchdata as $key => $row){
+            $fetchdata = $database->getReference($ref)->getValue();
+            foreach($fetchdata as $key => $row){
+                echo "<a href=>";
                 echo $row['id'];
-                echo "<br>";
+                echo "</a>";
 			}
-			echo("HOGYA");
 		?>
+      
     </div>
-    <div class="group"></div>
-  </div>
+  </div> 
 </div>
+
+
+
+    
+
+
 
 
 
