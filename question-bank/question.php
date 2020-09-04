@@ -27,40 +27,7 @@ $_SESSION["current"];
 }/**/
 
 <style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.container {
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 30px;
-	background: #dde1e7;
-}
-.neumorphism-1 {
-	height: 250px;
-	width: 250px;
-	background: #dde1e7;
-	border-radius: 5px;
-	box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* body {
+body {
   align-items: center;
   background-color: #f4f6ff; 
   background-image: linear-gradient(#4db6ac, #1d797e); 
@@ -189,7 +156,7 @@ button .arrow {
   width: 80vw;
 }
 
- */
+
 
 
 
@@ -630,7 +597,7 @@ h2 {
 	
 </head>
 <body>
-<!-- 
+
 <div class="hold">
   <div class="header">
     <div class="container">
@@ -644,8 +611,15 @@ h2 {
       </ul>
     </div>
   </div>
-</div> -->
-
+</div>
+<div class="section">
+  <div class="slider">
+    <div class="container slidercontent">
+      <h1 class="hero">Kohbee Questions</h1>
+      <h2 class="hero">Questions made by the top-faculties over india to clear your concepts </h2>
+    </div>
+  </div>
+</div>
 
     <?php
     ini_set('display_errors', 1); 
@@ -662,9 +636,7 @@ h2 {
     $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
     if($row['id']==$_SESSION["current"])
-    echo '<div class="container"><div class="neumorphism-1">';
     echo $row['ques'];
-    echo '</div></div>';
     }
     } 
 
@@ -672,9 +644,7 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo '<div class="container"><div class="neumorphism-1">';
         echo $row['ques'];
-        echo '</div></div>';
     }
     }
 
@@ -682,9 +652,7 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]-1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo '<div class="container"><div class="neumorphism-1">';
         echo $row['ques'];
-        echo '</div></div>';
     }
     }
 
@@ -701,13 +669,22 @@ h2 {
         <input type="submit" name="prev"
                 value="Previous"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input type="submit" name="show_ques"
-                value="First Questions"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                value="First Question"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input type="submit" name="next"
-                value="Next."/>
+                value="Next"/>
     </form> 
     </div>
         <br><br><br>
-    
+    <div class="section">
+    <div class="footer">
+        <div class="container white">
+        <div class="col four left">
+            
+        </div>
+        <div class="group"></div>
+        </div>
+    </div>
+    </div>
 
 </div>
 
