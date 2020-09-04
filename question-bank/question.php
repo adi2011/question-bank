@@ -516,8 +516,7 @@ h2 {
 	
 </head>
 <body>
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
 <div class="hold">
   <div class="header">
     <div class="container">
@@ -542,13 +541,17 @@ h2 {
 </div>
 
     <?php
-    if(isset($_POST['show_ques'])) {
     ini_set('display_errors', 1); 
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
     $ref="question-bank/number systems and its operations";
     $fetchdata = $database->getReference($ref)->getValue();
+    ?>
+
+
+    <?php
+    if(isset($_POST['show_ques'])) {
     foreach($fetchdata as $key => $row){
     if($row['id']==$current)
     echo $row['ques'];
@@ -557,12 +560,6 @@ h2 {
 
     if(isset($_POST['next'])) { 
         $current=$current+1;
-        ini_set('display_errors', 1); 
-        ini_set('display_startup_errors', 1); 
-        error_reporting(E_ALL);
-        include('./includes/dbconfig.php');
-        $ref="question-bank/number systems and its operations";
-        $fetchdata = $database->getReference($ref)->getValue();
         foreach($fetchdata as $key => $row){
         if($row['id']==$current)
         echo $row['ques'];
