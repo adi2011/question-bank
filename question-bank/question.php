@@ -669,11 +669,9 @@ h2 {
     $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
     if($row['id']==$_SESSION["current"])
-    echo "<div class="container">
-    <div class="neumorphism-1">";
+    echo '<div class="container"><div class="neumorphism-1">';
     echo $row['ques'];
-    echo "</div>
-    </div>";
+    echo '</div></div>';
     }
     } 
 
@@ -681,11 +679,9 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo "<div class="container">
-    <div class="neumorphism-1">";
-    echo $row['ques'];
-    echo "</div>
-    </div>";
+        echo '<div class="container"><div class="neumorphism-1">';
+        echo $row['ques'];
+        echo '</div></div>';
     }
     }
 
@@ -693,11 +689,9 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]-1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo "<div class="container">
-    <div class="neumorphism-1">";
-    echo $row['ques'];
-    echo "</div>
-    </div>";
+        echo '<div class="container"><div class="neumorphism-1">';
+        echo $row['ques'];
+        echo '</div></div>';
     }
     }
 
@@ -714,9 +708,9 @@ h2 {
         <input type="submit" name="prev"
                 value="Previous"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input type="submit" name="show_ques"
-                value="First Question"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                value="First Questions"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         <input type="submit" name="next"
-                value="Next"/>
+                value="Next."/>
     </form> 
     </div>
         <br><br><br>
