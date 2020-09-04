@@ -546,7 +546,6 @@ h2 {
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
     $ref="question-bank/number systems and its operations";
-    $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
 
@@ -560,12 +559,16 @@ h2 {
     }
      
     function first_ques(){
+        $fetchdata = $database->getReference($ref)->getValue();
+
         foreach($fetchdata as $key => $row){
             if($row['id']==$current)
             echo $row['ques'];
             }
     }
     function next_ques(){
+        $fetchdata = $database->getReference($ref)->getValue();
+
         $current=$current+1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$current)
