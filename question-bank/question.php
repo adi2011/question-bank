@@ -566,6 +566,11 @@ h2 {
     }
      } 
     ?>
+    <?php 
+    echo "<h1>";
+    echo $current;
+    echo "</h1>"
+    ?>
     <form method="post">
         <input type="submit" name="show_ques"
                 value="Show Questions"/>  
