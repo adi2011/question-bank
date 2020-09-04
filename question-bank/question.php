@@ -669,7 +669,7 @@ h2 {
         <input type="submit" name="show_ques"
                 value="First Question"/>&emsp;
         <input type="submit" name="next"
-                value="Nextt"/>
+                value="Next"/>
     </form> 
     </div>
 </div>
