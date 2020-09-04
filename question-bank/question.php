@@ -29,7 +29,8 @@ $_SESSION["current"];
 <style>
 body {
   align-items: center;
-  background-color: #d1def0;
+  background-color: #f4f6ff; 
+  background-image: linear-gradient(#4db6ac, #1d797e); 
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -268,7 +269,8 @@ ul.nav li a {
 
 .section .slider,
 .section .footer {
-  background: #1D797E;
+  background-color: #f4f6ff; 
+  background-image: linear-gradient(#4db6ac, #1d797e); 
 }
 
 .slidercontent {
@@ -672,17 +674,17 @@ h2 {
                 value="Next"/>
     </form> 
     </div>
-
-<div class="section">
-  <div class="footer">
-    <div class="container white">
-      <div class="col four left">
-        
-      </div>
-      <div class="group"></div>
+<br><br><br>
+    <div class="section">
+    <div class="footer">
+        <div class="container white">
+        <div class="col four left">
+            
+        </div>
+        <div class="group"></div>
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
 </div>
 
