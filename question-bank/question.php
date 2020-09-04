@@ -551,20 +551,27 @@ h2 {
 
 
     <?php
-    if(isset($_POST['show_ques'])) {
-    foreach($fetchdata as $key => $row){
-    if($row['id']==$current)
-    echo $row['ques'];
-    }
+    if(array_key_exists('show_ques', $_POST)) {
+        first_ques();
     } 
 
-    if(isset($_POST['next'])) { 
+    else if(array_key_exists('next', $_POST)) {  
+        next_ques();
+    }
+     
+    function first_ques(){
+        foreach($fetchdata as $key => $row){
+            if($row['id']==$current)
+            echo $row['ques'];
+            }
+    }
+    function next_ques(){
         $current=$current+1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$current)
         echo $row['ques'];
     }
-     } 
+    }
     ?>
     <?php 
     echo "<h1>";
@@ -573,9 +580,9 @@ h2 {
     ?>
     <form method="post">
         <input type="submit" name="show_ques"
-                value="Show Questions"/>  
+                value="Show Question"/>  
         <input type="submit" name="next"
-                value="Next"/>
+                value="Next."/>
     </form> 
     
 
