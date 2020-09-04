@@ -1,7 +1,7 @@
 <?php
 session_start();
 // $_SESSION["Whereto"]="mat-ch1";
-$current=1;
+$_SESSION["current"]=1;
 ?>  
 <!DOCTYPE html>
 <html ⚡>
@@ -553,15 +553,15 @@ h2 {
     <?php
     if(isset($_POST['show_ques'])) {
     foreach($fetchdata as $key => $row){
-    if($row['id']==$current)
+    if($row['id']==$_SESSION["current"])
     echo $row['ques'];
     }
     } 
 
     else if(isset($_POST['next'])) { 
-        $current=$current+1;
+        $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
-        if($row['id']==$current)
+        if($row['id']==$_SESSION["current"])
         echo $row['ques'];
     }
     } 
