@@ -27,7 +27,40 @@ $_SESSION["current"];
 }/**/
 
 <style>
-body {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	background: #dde1e7;
+}
+.neumorphism-1 {
+	height: 250px;
+	width: 250px;
+	background: #dde1e7;
+	border-radius: 5px;
+	box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
   align-items: center;
   background-color: #f4f6ff; 
   background-image: linear-gradient(#4db6ac, #1d797e); 
@@ -156,7 +189,7 @@ button .arrow {
   width: 80vw;
 }
 
-
+ */
 
 
 
@@ -636,7 +669,11 @@ h2 {
     $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
     if($row['id']==$_SESSION["current"])
+    echo "<div class="container">
+    <div class="neumorphism-1">";
     echo $row['ques'];
+    echo "</div>
+    </div>";
     }
     } 
 
@@ -644,7 +681,11 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo $row['ques'];
+        echo "<div class="container">
+    <div class="neumorphism-1">";
+    echo $row['ques'];
+    echo "</div>
+    </div>";
     }
     }
 
@@ -652,7 +693,11 @@ h2 {
         $_SESSION["current"]=$_SESSION["current"]-1;
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"])
-        echo $row['ques'];
+        echo "<div class="container">
+    <div class="neumorphism-1">";
+    echo $row['ques'];
+    echo "</div>
+    </div>";
     }
     }
 
@@ -674,7 +719,7 @@ h2 {
                 value="Next"/>
     </form> 
     </div>
-<br><br><br>
+        <br><br><br>
     <div class="section">
     <div class="footer">
         <div class="container white">
