@@ -662,7 +662,7 @@ h2 {
     ?>
 
 
-    <div style="margin: 0% 20%;">
+    <div style="margin: 0% 30%;">
     <form method="post">
         <input type="submit" name="prev"
                 value="Previous"/>&emsp;
