@@ -556,10 +556,15 @@ h2 {
                 echo $row['id'];
                 echo "</a>";
 			}
-		?>
-      
+	?>
     </div>
-  </div> 
+  </div>
+  <div><p><?php foreach($fetchdata as $key => $row){
+            if($row['id']==1)
+            echo $row['ques'];
+            }
+            ?></p></div>
+
 </div>
 
 
