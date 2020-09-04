@@ -551,11 +551,6 @@ h2 {
     }
 
     ?>
-    <?php 
-    echo "<h1>";
-    echo $_SESSION["current"];
-    echo "</h1>";
-    ?>
 
         </div>
     </div>
