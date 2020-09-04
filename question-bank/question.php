@@ -503,7 +503,16 @@ h2 {
         if($row['id']==$_SESSION["current"])
         echo $row['ques'];
     }
-    } 
+    }
+
+    else if(isset($_POST['prev'])) { 
+        $_SESSION["current"]=$_SESSION["current"]-1;
+        foreach($fetchdata as $key => $row){
+        if($row['id']==$_SESSION["current"])
+        echo $row['ques'];
+    }
+    }
+
     ?>
     <?php 
     echo "<h1>";
@@ -511,10 +520,13 @@ h2 {
     echo "</h1>";
     ?>
     <form method="post">
+        <input type="submit" name="prev"
+                value="Previous"/>
         <input type="submit" name="show_ques"
                 value="Show Questions"/>  
         <input type="submit" name="next"
                 value="Next"/>
+        
     </form> 
     
 </div>
