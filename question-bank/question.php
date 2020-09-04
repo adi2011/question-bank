@@ -1,7 +1,7 @@
 <?php
 session_start();
 // $_SESSION["Whereto"]="mat-ch1";
-$_SESSION["current"]=1;
+$_SESSION["current"];
 ?>  
 <!DOCTYPE html>
 <html ⚡>
@@ -552,6 +552,7 @@ h2 {
 
     <?php
     if(isset($_POST['show_ques'])) {
+    $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
     if($row['id']==$_SESSION["current"])
     echo $row['ques'];
@@ -573,9 +574,9 @@ h2 {
     ?>
     <form method="post">
         <input type="submit" name="show_ques"
-                value="Show Questions."/>  
+                value="Show Questions"/>  
         <input type="submit" name="next"
-                value="Next."/>
+                value="Next"/>
     </form> 
     
 
