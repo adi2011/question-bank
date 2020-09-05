@@ -33,7 +33,7 @@ body {
   margin: 0% 25%;
   background-color: transparent;
   width: 50%;
-  height: 500px;
+  height: 1000px;
   perspective: 1000px;
 }
 
