@@ -69,9 +69,9 @@
 
   <?php
     if(isset($_POST['subject'])){
-  echo '<form method="POST">';
-  echo '<label for="chapter">Subject:</label>';
-  echo '<select name="chapter" id="chapter">';
+    echo '<form method="POST">';
+    echo '<label for="chapter">Chapter:</label>';
+    echo '<select name="chapter" id="chapter">';
     $ref="ncert-solutions/".$_POST['class']."/".$_POST['subject'];
     $fetchdata = $database->getReference($ref)->getValue();
 
@@ -81,7 +81,7 @@
     echo '">';
     echo $key;
     echo '</option>';
-    }
+    
 
     // <option value="chapter1/ Knowing our Numbers">Chapter 1</option>
     // <option value="chapter2/ Whole Numbers">Chapter 2</option>
@@ -100,7 +100,6 @@
   echo '</select>';
   echo '<input type="submit" value="Submit">';
   echo '</form>';
-  
 }?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
