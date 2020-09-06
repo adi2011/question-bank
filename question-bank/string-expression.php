@@ -19,7 +19,8 @@
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    
+    $ref="ncert-solutions";
+    $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
 <form method="POST">
@@ -54,8 +55,6 @@
   <label for="chapter">Chapter:</label>
   <select name="chapter" id="chapter">
     <?php
-    $ref="ncert-solutions";
-    $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
 
