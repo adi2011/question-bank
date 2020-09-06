@@ -23,7 +23,7 @@
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
-<form method="POST">
+<form method="post">
   <label for="class">Class:</label>
   <select name="class" id="class">
     <?php
@@ -44,13 +44,14 @@
 </form>
 
 <?php
-if(isset($_POST['class'])){
+echo $_POST['class'];
+// if(isset($_POST['class'])){
 // echo "<form method="POST">
 //   <label for="subject">Subject:</label>
 //   <select name="subject" id="subject"> ";
     
-  $ref="ncert-solutions/".$_POST['class'];
-  echo $ref;
+  // $ref="ncert-solutions/".$_POST['class'];
+  // echo $ref;
   // $fetchdata = $database->getReference($ref)->getValue();
   // foreach($fetchdata as $key => $value) {  
   //   echo '<option value="'
@@ -64,7 +65,7 @@ if(isset($_POST['class'])){
   // echo '</select>';
   // echo '<input type="submit" value="Click Here">'
   // echo '</form>';
-  }
+  // }
   ?>
 
   <form method="POST">
