@@ -28,7 +28,7 @@
   <select name="class" id="class">
     <?php
     foreach($fetchdata as $key => $value) {  
-    echo '<option value="'
+    echo '<option value="';
     echo $key;
     echo '">';
     echo $key;
