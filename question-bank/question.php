@@ -1,4 +1,15 @@
-
+<?php
+session_start()
+// $input='Q. 9';
+// function inc($matches) {
+//     return ++$matches[1];
+// }
+// $input = preg_replace_callback("|(\d+)|", "inc", $input);
+// $input = preg_replace_callback("|(\d+)|", "inc", $input);
+// echo '<h1>';
+// echo $input;
+// echo '</h1>';
+?>
 <!DOCTYPE html>
 <html ⚡>
 <head>
@@ -100,20 +111,19 @@ body {
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
+    $ref=$_SESSION["reflast"];
     
     echo "ref is a <h1>";
     echo $ref;
     echo "</h1>\n";
-    $fetchdata = $database->getReference($ref);
+    $fetchdata = $database->getReference($ref)->getValue();
+
     ?>
 <div>
     <?php
-    $snapshot = $fetchdata->getSnapshot();
-    $value=$snapshot->getValue();
-    $Child=$snapshot->numChildren();
-    echo $value;
-    echo $Child;
+    foreach ($fetchdata as $key => $value) {
+    echo $value["ques"];
+    }
 
     // foreach($fetchdata as $key => $row){
     //   echo $row['grade'];

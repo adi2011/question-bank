@@ -111,7 +111,9 @@ session_start()
   foreach ($fetchdata as $key => $value) {
     $_SESSION["reflast"]=$ref."/".$key;
   }
-  echo $_SESSION["reflast"];
+  if(isset($_SESSION["reflast"])){
+    header("http://guarded-atoll-77664.herokuapp.com/question.php");
+  }
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
