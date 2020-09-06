@@ -104,6 +104,9 @@ body {
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
     $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
+    echo "ref is <h1>";
+    echo $ref;
+    echo "</h1>\n"
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
