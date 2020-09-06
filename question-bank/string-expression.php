@@ -31,7 +31,7 @@
     foreach($fetchdata as $key => $value) {  
     echo '<option value="';
     echo $key;  
-    echo '">Class 6</option>'
+    echo '">Class 6</option>';
     }
     ?>
 
