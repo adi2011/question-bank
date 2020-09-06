@@ -103,7 +103,7 @@ body {
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="question-bank/number systems and its operations";
+    $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers";
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
@@ -112,7 +112,7 @@ body {
     if(isset($_POST['show_ques'])) {
     $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
-    if($row['id']==$_SESSION["current"]){
+    if($row['question_no']==$_SESSION["current"]){
     echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
     echo $row['ques'];
     echo '</div><div class="flip-card-back">';
@@ -127,11 +127,11 @@ body {
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"]){
              echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
-    echo $row['ques'];
-    echo '</div><div class="flip-card-back">';
-    echo 'THIS IS BACK SIDE';
-    echo '</div></div></div>';
-            }
+        echo $row['ques'];
+        echo '</div><div class="flip-card-back">';
+        echo 'THIS IS BACK SIDE';
+        echo '</div></div></div>';
+                }
     }
     }
 
