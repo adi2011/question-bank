@@ -72,7 +72,7 @@ session_start()
   <?php
 
     if(isset($_POST['subject'])){
-    $_SESSION["chptr"];
+    $_SESSION["sbj"]=$_POST['subject'];
     echo '<form method="POST">';
     echo '<label for="chapter">Chapter:</label>';
     echo '<select name="chapter" id="chapter">';
@@ -106,7 +106,7 @@ session_start()
   echo '</form>';
   }
   $_SESSION["chptr"]=$_POST['chapter'];
-  $ref=$ref."/".$_SESSION["chptr"];
+  $ref="ncert-solutions/".$_SESSION["cls"]."/". $_SESSION["sbj"]."/".$_SESSION["chptr"];
   echo $ref;
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
