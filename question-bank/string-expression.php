@@ -21,7 +21,7 @@
     include('./includes/dbconfig.php');
     $ref="ncert-solutions";
     $fetchdata = $database->getReference($ref)->getValue();
-    echo $fetchdata->getValue();
+    echo count($fetchdata);
     ?>
 
 <form action="./question.php" method="POST">
