@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>  
+
 <!DOCTYPE html>
 <html ⚡>
 <head>
@@ -109,7 +107,6 @@ body {
     echo "</h1>\n"
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
-
 <div>
     <?php
     
