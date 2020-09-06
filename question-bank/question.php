@@ -103,36 +103,45 @@ body {
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers";
+    $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
 
 <div>
     <?php
+    
+    function inc($matches) {
+          return ++$matches[1];
+    }
+
     if(isset($_POST['show_ques'])) {
-    $_SESSION["current"]=1;
+      $input='Q. 1';
+    // $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
-    if($row['question_no']==$_SESSION["current"]){
+    if($row['question_no']==$input){
     echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
     echo $row['ques'];
     echo '</div><div class="flip-card-back">';
     echo 'THIS IS BACK SIDE';
     echo '</div></div></div>';
+    break;
     }
     }
     } 
 
     else if(isset($_POST['next'])) { 
-        $_SESSION["current"]=$_SESSION["current"]+1;
+       $input = preg_replace_callback("|(\d+)|", "inc", $input);
+        // $_SESSION["current"]=$_SESSION["current"]+1;
         foreach($fetchdata as $key => $row){
-        if($row['id']==$_SESSION["current"]){
-             echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
+        if($row['question_no']==$input){
+             echo '<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
         echo $row['ques'];
         echo '</div><div class="flip-card-back">';
         echo 'THIS IS BACK SIDE';
         echo '</div></div></div>';
-                }
-    }
+        break;
+        }
+      }
     }
 
     else if(isset($_POST['prev'])) { 
@@ -140,11 +149,11 @@ body {
         foreach($fetchdata as $key => $row){
         if($row['id']==$_SESSION["current"]){
             
-             echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
-    echo $row['ques'];
-    echo '</div><div class="flip-card-back">';
-    echo 'THIS IS BACK SIDE';
-    echo '</div></div></div>';
+          echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
+          echo $row['ques'];
+          echo '</div><div class="flip-card-back">';
+          echo 'THIS IS BACK SIDE';
+          echo '</div></div></div>';
                 
         }
     }

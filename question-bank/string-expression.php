@@ -16,7 +16,7 @@
 <h1>NCERT SOLUTIONS:</h1>
 
 
-<form action="./action.php" method="POST">
+<form action="./question.php" method="POST">
   <label for="class">Class:</label>
   <select name="class" id="class">
     <option value="Class6">Class 6</option>
