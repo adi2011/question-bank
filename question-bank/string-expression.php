@@ -107,7 +107,10 @@ session_start()
   }
   $_SESSION["chptr"]=$_POST['chapter'];
   $ref="ncert-solutions/".$_SESSION["cls"]."/". $_SESSION["sbj"]."/".$_SESSION["chptr"];
-  echo $ref;
+  $fetchdata = $database->getReference($ref)->getValue();
+  foreach ($fetchdata as $key => $value) {
+    echo $key;
+  }
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
