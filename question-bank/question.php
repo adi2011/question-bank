@@ -103,7 +103,6 @@ body {
     include('./includes/dbconfig.php');
     // $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
     $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers"
-
     echo "ref is <h1>";
     echo $ref;
     echo "</h1>\n"
@@ -165,7 +164,7 @@ body {
 
     ?>
 
-        </div>
+    
     </div>
     <!-- <div class="content-page"><div class="main-layer"><h1>ADITYA</h1></div></div> -->
 <hr><br>
