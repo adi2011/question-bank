@@ -109,9 +109,9 @@ body {
     ?>
 <div>
     <?php
-    // foreach($fetchdata as $key => $row){
-    //   echo $row['question_no'];
-    // }
+    foreach($fetchdata as $key => $row){
+      echo $row['question_no'];
+    }
     // function inc($matches) {
     //       return ++$matches[1];
     // }
