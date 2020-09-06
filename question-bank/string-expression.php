@@ -111,7 +111,7 @@ session_start()
   foreach ($fetchdata as $key => $value) {
     $_SESSION["reflast"]=$ref."/".$key;
   }
-  if(isset($_SESSION["reflast"])){
+  if(isset($_SESSION["reflast"]) && isset($_SESSION["cls"]) && isset($_SESSION["sbj"]) && isset($_SESSION["chptr"])){
     header("Location: http://guarded-atoll-77664.herokuapp.com/question.php");
   }
 ?>
