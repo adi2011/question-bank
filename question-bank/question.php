@@ -105,11 +105,16 @@ body {
     echo "ref is a <h1>";
     echo $ref;
     echo "</h1>\n";
-    $fetchdata = $database->getReference($ref)->getValue();
+    $fetchdata = $database->getReference($ref);
     ?>
 <div>
     <?php
-    echo $fetchdata;
+    $snapshot = $fetchdata->getSnapshot();
+    $value=$snapshot->getValue();
+    $Child=$snapshot->numChildren();
+    echo $value;
+    echo $Child;
+
     // foreach($fetchdata as $key => $row){
     //   echo $row['grade'];
     // }
