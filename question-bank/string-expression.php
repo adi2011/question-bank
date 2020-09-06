@@ -109,8 +109,9 @@ session_start()
   $ref="ncert-solutions/".$_SESSION["cls"]."/". $_SESSION["sbj"]."/".$_SESSION["chptr"];
   $fetchdata = $database->getReference($ref)->getValue();
   foreach ($fetchdata as $key => $value) {
-    echo $key;
+    $_SESSION["reflast"]=$ref."/".$key;
   }
+  echo $_SESSION["reflast"];
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
