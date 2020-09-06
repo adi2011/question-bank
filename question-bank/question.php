@@ -110,7 +110,7 @@ body {
 <div>
     <?php
     foreach($fetchdata as $key => $row){
-      echo $row['question_no'];
+      echo $row['grade'];
     }
     // function inc($matches) {
     //       return ++$matches[1];
