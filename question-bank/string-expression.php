@@ -53,7 +53,7 @@ echo "<form method="POST">
   echo $ref;
   $fetchdata = $database->getReference($ref)->getValue();
   foreach($fetchdata as $key => $value) {  
-    echo '<option value="'
+    echo '<option value="';
     echo $key;
     echo '">';
     echo $key;
