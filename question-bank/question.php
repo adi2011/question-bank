@@ -109,7 +109,7 @@ body {
     ?>
 <div>
     <?php
-    echo $fetchdata['grade'];
+    echo $fetchdata;
     // foreach($fetchdata as $key => $row){
     //   echo $row['grade'];
     // }
