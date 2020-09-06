@@ -101,7 +101,9 @@ body {
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
+    // $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
+    $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers"
+
     echo "ref is <h1>";
     echo $ref;
     echo "</h1>\n"
@@ -109,55 +111,57 @@ body {
     ?>
 <div>
     <?php
-    
-    function inc($matches) {
-          return ++$matches[1];
-    }
-
-    if(isset($_POST['show_ques'])) {
-      $input='Q. 1';
-    // $_SESSION["current"]=1;
     foreach($fetchdata as $key => $row){
-    if($row['question_no']==$input){
-    echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
-    echo $row['ques'];
-    echo '</div><div class="flip-card-back">';
-    echo 'THIS IS BACK SIDE';
-    echo '</div></div></div>';
-    break;
+      echo $row['question_no'];
     }
-    }
-    } 
+    // function inc($matches) {
+    //       return ++$matches[1];
+    // }
 
-    else if(isset($_POST['next'])) { 
-       $input = preg_replace_callback("|(\d+)|", "inc", $input);
-        // $_SESSION["current"]=$_SESSION["current"]+1;
-        foreach($fetchdata as $key => $row){
-        if($row['question_no']==$input){
-             echo '<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
-        echo $row['ques'];
-        echo '</div><div class="flip-card-back">';
-        echo 'THIS IS BACK SIDE';
-        echo '</div></div></div>';
-        break;
-        }
-      }
-    }
+    // if(isset($_POST['show_ques'])) {
+    //   $input='Q. 1';
+    // // $_SESSION["current"]=1;
+    // foreach($fetchdata as $key => $row){
+    // if($row['question_no']==$input){
+    // echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
+    // echo $row['ques'];
+    // echo '</div><div class="flip-card-back">';
+    // echo 'THIS IS BACK SIDE';
+    // echo '</div></div></div>';
+    // break;
+    // }
+    // }
+    // } 
 
-    else if(isset($_POST['prev'])) { 
-        $_SESSION["current"]=$_SESSION["current"]-1;
-        foreach($fetchdata as $key => $row){
-        if($row['id']==$_SESSION["current"]){
+    // else if(isset($_POST['next'])) { 
+    //    $input = preg_replace_callback("|(\d+)|", "inc", $input);
+    //     // $_SESSION["current"]=$_SESSION["current"]+1;
+    //     foreach($fetchdata as $key => $row){
+    //     if($row['question_no']==$input){
+    //          echo '<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
+    //     echo $row['ques'];
+    //     echo '</div><div class="flip-card-back">';
+    //     echo 'THIS IS BACK SIDE';
+    //     echo '</div></div></div>';
+    //     break;
+    //     }
+    //   }
+    // }
+
+    // else if(isset($_POST['prev'])) { 
+    //     $_SESSION["current"]=$_SESSION["current"]-1;
+    //     foreach($fetchdata as $key => $row){
+    //     if($row['id']==$_SESSION["current"]){
             
-          echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
-          echo $row['ques'];
-          echo '</div><div class="flip-card-back">';
-          echo 'THIS IS BACK SIDE';
-          echo '</div></div></div>';
+    //       echo '   <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front">';
+    //       echo $row['ques'];
+    //       echo '</div><div class="flip-card-back">';
+    //       echo 'THIS IS BACK SIDE';
+    //       echo '</div></div></div>';
                 
-        }
-    }
-    }
+    //     }
+    // }
+    // }
 
     ?>
 
@@ -165,7 +169,7 @@ body {
     </div>
     <!-- <div class="content-page"><div class="main-layer"><h1>ADITYA</h1></div></div> -->
 <hr><br>
-    <div style="margin: 0% 30%;">
+    <!-- <div style="margin: 0% 30%;">
     <form method="post">
         <input type="submit" name="prev"
                 value="Previous"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -174,7 +178,7 @@ body {
         <input type="submit" name="next"
                 value="Next"/>
     </form> 
-    </div>
+    </div> -->
         <br><br><br>
 
 
