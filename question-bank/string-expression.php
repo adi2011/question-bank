@@ -44,10 +44,10 @@
 </form>
 
 <?php
-if(isset($_POST['class'])){
-echo "<form method="POST">
-  <label for="subject">Subject:</label>
-  <select name="subject" id="subject"> ";
+ if(isset($_POST['class'])){
+    echo '<form method="POST">';
+    echo '<label for="subject">Subject:</label>';
+    echo '<select name="subject" id="subject">';
     
   $ref="ncert-solutions/".$_POST['class'];
   echo $ref;
@@ -62,7 +62,7 @@ echo "<form method="POST">
     // <option value="maths">Maths</option>
     // <option value="science">Science</option>
   echo '</select>';
-  echo '<input type="submit" value="Click Here">'
+  echo '<input type="submit" value="Click Here">';
   echo '</form>';
 }
   ?>
