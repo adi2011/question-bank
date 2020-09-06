@@ -19,38 +19,47 @@
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="ncert-solutions";
-    $fetchdata = $database->getReference($ref)->getValue();
     
     ?>
 
-<form action="./question.php" method="POST">
+<form method="POST">
   <label for="class">Class:</label>
   <select name="class" id="class">
     <?php
     foreach($fetchdata as $key => $value) {  
-    echo '<option value="';
-    echo $key;  
-    echo '">Class 6</option>';
+    echo '<option value="class">';
+    echo $key;
+    echo '</option>';
     }
     ?>
-
-    
     <!-- <option value="Class7">Class 7</option>
     <option value="Class7">Class 8</option>
     <option value="Class7">Class 9</option>
     <option value="Class7">Class 10</option> -->
-
   </select>
-  
+  <input type="submit" value="Click Here">
+</form>
+
+<form method="POST">
   <label for="subject">Subject:</label>
   <select name="subject" id="subject">
     <option value="maths">Maths</option>
     <option value="science">Science</option>
   </select>
+    <input type="submit" value="Click Here">
+</form>
+  
 
+  <form method="POST">
   <label for="chapter">Chapter:</label>
   <select name="chapter" id="chapter">
+    <?php
+    $ref="ncert-solutions";
+    $fetchdata = $database->getReference($ref)->getValue();
+    ?>
+
+
+
     <option value="chapter1/ Knowing our Numbers">Chapter 1</option>
     <option value="chapter2/ Whole Numbers">Chapter 2</option>
     <option value="chapter3/ Playing with Numbers">Chapter 3</option>
