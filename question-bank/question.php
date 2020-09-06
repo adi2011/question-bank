@@ -99,17 +99,17 @@ body {
     ini_set('display_errors', 1); 
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
-    // include('./includes/dbconfig.php');
+    include('./includes/dbconfig.php');
     $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"]."/0";
     
     echo "ref is a <h1>";
     echo $ref;
     echo "</h1>\n";
-    // $fetchdata = $database->getReference($ref)->getValue();
+    $fetchdata = $database->getReference($ref)->getValue();
     ?>
 <div>
     <?php
-    // echo $fetchdata['grade'];
+    echo $fetchdata['grade'];
     // foreach($fetchdata as $key => $row){
     //   echo $row['grade'];
     // }
