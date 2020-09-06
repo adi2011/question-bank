@@ -95,17 +95,16 @@ body {
   </div>
 </div> -->
 
-
     <?php
     ini_set('display_errors', 1); 
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
     // $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
-    $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers"
+    $ref="ncert-solutions/Class6/maths/chapter1/Knowing our Numbers";
     echo "ref is <h1>";
     echo $ref;
-    echo "</h1>\n"
+    echo "</h1>\n";
     $fetchdata = $database->getReference($ref)->getValue();
     ?>
 <div>
