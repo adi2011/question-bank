@@ -100,7 +100,7 @@ body {
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
     include('./includes/dbconfig.php');
-    $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"];
+    $ref="ncert-solutions/".$_POST["class"]."/".$_POST["subject"]."/".$_POST["chapter"]"/0";
     
     echo "ref is a <h1>";
     echo $ref;
