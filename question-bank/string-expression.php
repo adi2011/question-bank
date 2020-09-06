@@ -44,8 +44,9 @@
 </form>
 
 <?php
+if(isset($_POST['class'])){
+  
 echo $_POST['class'];
-// if(isset($_POST['class'])){
 // echo "<form method="POST">
 //   <label for="subject">Subject:</label>
 //   <select name="subject" id="subject"> ";
@@ -65,7 +66,7 @@ echo $_POST['class'];
   // echo '</select>';
   // echo '<input type="submit" value="Click Here">'
   // echo '</form>';
-  // }
+}
   ?>
 
   <form method="POST">
