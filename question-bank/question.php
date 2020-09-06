@@ -194,7 +194,9 @@ body {
     </form> 
     </div> -->
         <br><br><br>
-
+<?php
+session_destroy();
+?>
 
 </body>
 </html>
