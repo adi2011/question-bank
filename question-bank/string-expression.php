@@ -44,7 +44,7 @@
 </form>
 
 <?php
-// echo $_POST['class'];
+echo $_POST['class'];
 // if(isset($_POST['class'])){
 // echo "<form method="POST">
 //   <label for="subject">Subject:</label>
