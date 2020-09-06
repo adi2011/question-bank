@@ -112,7 +112,7 @@ session_start()
     $_SESSION["reflast"]=$ref."/".$key;
   }
   if(isset($_SESSION["reflast"])){
-    header("http://guarded-atoll-77664.herokuapp.com/question.php");
+    header("Location: http://guarded-atoll-77664.herokuapp.com/question.php");
   }
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
