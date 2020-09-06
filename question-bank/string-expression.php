@@ -64,7 +64,7 @@ if(isset($_POST['class'])){
   // echo '</select>';
   // echo '<input type="submit" value="Click Here">'
   // echo '</form>';
-  // }
+  }
   ?>
 
   <form method="POST">
