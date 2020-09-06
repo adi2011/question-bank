@@ -14,11 +14,20 @@
 <body>
 
 <h1>NCERT SOLUTIONS:</h1>
-
+<?php
+    ini_set('display_errors', 1); 
+    ini_set('display_startup_errors', 1); 
+    error_reporting(E_ALL);
+    include('./includes/dbconfig.php');
+    $ref="ncert-solutions";
+    $fetchdata = $database->getReference($ref)->getValue();
+    echo $fetchdata;
+    ?>
 
 <form action="./question.php" method="POST">
   <label for="class">Class:</label>
   <select name="class" id="class">
+
     <option value="Class6">Class 6</option>
     <option value="Class7">Class 7</option>
     <option value="Class7">Class 8</option>
