@@ -1,4 +1,5 @@
 <?php
+session_start()
 // $input='Q. 9';
 // function inc($matches) {
 //     return ++$matches[1];
@@ -45,6 +46,7 @@
 
 <?php
  if(isset($_POST['class'])){
+    $_SESSION["cls"]=$_POST['class'];
     echo '<form method="POST">';
     echo '<label for="subject">Subject:</label>';
     echo '<select name="subject" id="subject">';
@@ -68,7 +70,7 @@
 
 
   <?php
-  $ref="ncert-solutions/".$_POST['class']."/".$_POST['subject'];
+  $ref="ncert-solutions/".$_SESSION["cls"]."/".$_POST['subject'];
 
   echo $ref;
 //     if(isset($_POST['subject'])){
