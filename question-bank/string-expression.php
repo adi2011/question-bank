@@ -21,20 +21,25 @@
     include('./includes/dbconfig.php');
     $ref="ncert-solutions";
     $fetchdata = $database->getReference($ref)->getValue();
-    foreach($fetchdata as $key => $value) {  
-    echo "Key: " . $key . "\n";  
-    }
+    
     ?>
 
 <form action="./question.php" method="POST">
   <label for="class">Class:</label>
   <select name="class" id="class">
+    <?php
+    foreach($fetchdata as $key => $value) {  
+    echo '<option value="';
+    echo $key;  
+    echo '">Class 6</option>'
+    }
+    ?>
 
-    <option value="Class6">Class 6</option>
-    <option value="Class7">Class 7</option>
+    
+    <!-- <option value="Class7">Class 7</option>
     <option value="Class7">Class 8</option>
     <option value="Class7">Class 9</option>
-    <option value="Class7">Class 10</option>
+    <option value="Class7">Class 10</option> -->
 
   </select>
   
