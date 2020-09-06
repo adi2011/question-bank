@@ -68,7 +68,9 @@
 
 
   <?php
-  echo $_POST['subject'];
+  $ref="ncert-solutions/".$_POST['class']."/".$_POST['subject'];
+
+  echo $ref;
 //     if(isset($_POST['subject'])){
 //     echo '<form method="POST">';
 //     echo '<label for="chapter">Chapter:</label>';
