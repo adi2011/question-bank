@@ -72,10 +72,11 @@ session_start()
   <?php
 
     if(isset($_POST['subject'])){
+    $_SESSION["chptr"];
     echo '<form method="POST">';
     echo '<label for="chapter">Chapter:</label>';
     echo '<select name="chapter" id="chapter">';
-        $ref="ncert-solutions/".$_SESSION["cls"]."/".$_POST['subject'];
+    $ref="ncert-solutions/".$_SESSION["cls"]."/".$_POST['subject'];
        
     $fetchdata = $database->getReference($ref)->getValue();
 
@@ -86,7 +87,6 @@ session_start()
     echo $key;
     echo '</option>';
     }
-
     // <option value="chapter1/ Knowing our Numbers">Chapter 1</option>
     // <option value="chapter2/ Whole Numbers">Chapter 2</option>
     // <option value="chapter3/ Playing with Numbers">Chapter 3</option>
@@ -104,7 +104,10 @@ session_start()
   echo '</select>';
   echo '<input type="submit" value="Submit">';
   echo '</form>';
-}
+  }
+  $_SESSION["chptr"]=$_POST['chapter'];
+  $ref=$ref."/".$_SESSION["chptr"];
+  echo $ref;
 ?>
 <p>Click the "Submit" button and the form-data will be sent to a page on the 
 server called "action_page.php".</p>
