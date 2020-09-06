@@ -45,27 +45,25 @@
 
 <?php
 if(isset($_POST['class'])){
-  
-echo $_POST['class'];
-// echo "<form method="POST">
-//   <label for="subject">Subject:</label>
-//   <select name="subject" id="subject"> ";
+echo "<form method="POST">
+  <label for="subject">Subject:</label>
+  <select name="subject" id="subject"> ";
     
-  // $ref="ncert-solutions/".$_POST['class'];
-  // echo $ref;
-  // $fetchdata = $database->getReference($ref)->getValue();
-  // foreach($fetchdata as $key => $value) {  
-  //   echo '<option value="'
-  //   echo $key;
-  //   echo '">';
-  //   echo $key;
-  //   echo '</option>';
-  //   }
-  //   // <option value="maths">Maths</option>
-  //   // <option value="science">Science</option>
-  // echo '</select>';
-  // echo '<input type="submit" value="Click Here">'
-  // echo '</form>';
+  $ref="ncert-solutions/".$_POST['class'];
+  echo $ref;
+  $fetchdata = $database->getReference($ref)->getValue();
+  foreach($fetchdata as $key => $value) {  
+    echo '<option value="'
+    echo $key;
+    echo '">';
+    echo $key;
+    echo '</option>';
+    }
+    // <option value="maths">Maths</option>
+    // <option value="science">Science</option>
+  echo '</select>';
+  echo '<input type="submit" value="Click Here">'
+  echo '</form>';
 }
   ?>
 
